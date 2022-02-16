@@ -1,0 +1,68 @@
+Um ponto positivo da POO é a organização do codigo, mesmo que minima. Com uma boa organização, como padronizar o desenvolvimento, facilita a manutenção do codigo.
+
+Paradigmas de programao
+  - É classificação de linguagens por suas caracteristicas
+
+  Paradigma Declarativo
+    Você declara o que quiser e computador tem que trazer o resultado desejado 
+    Ex: Data-Driven(SQL), prog. funcional, prog. Lógica.
+
+  Paradigma Imperativo
+    Você instrui todo processo que deve ser realizado pela maquina.
+    Ex: Orientado a objeto, Procedural.
+
+  Multiparadigma
+
+POO, por que é tão popular?
+ Por causa da organização, é compativel com muitas linguagens e pode facilitar alguns processos.
+
+POO - Origens
+  Surgiu por volta dos anos 50/60 com simula 67 e Basic.
+
+  Tenta buscar representar objetos/fatos do mundo real com seus atributos(variaveis), caracteristicas e metodos(funções) seu comportamento.
+
+--------------------------------------------------
+Aula 3
+
+UML - Unified Modeling Language
+  Linguagem de modelagem de desenvolvimento geral, tem como objetivo fornecer uma maneira padrão de ver um sistema.
+  
+  objetivo  
+    Oferecer uma maneira de vizualizar o projeto de um sistema com um conjunto de diagramas
+    Isso inclui:
+      - Atividades
+      - Como o usuario interagi com os componentes do software
+      - Como sistema funcionará
+      - Como o sistema interagi entre os proprios componentes
+      - Interface do usuario
+
+  Maneira incorretas em usar UML
+    - Ter UML em todas partes do sistema
+    - Assumir que novatos possam projetar com UML
+
+  Diagrama
+    Estruturais
+      Diagrama de classes
+        Uma classe com seus atributos tem que ser chamada para poder fazer seus metodos. Um objeto é uma planta que já esta estanciada para ser usada.
+
+        Obs: Metodos e atributos privados não podem ser acessados por fora da classe
+
+        O diagrama de classe é o principal componente de modelagem orientada a objeto.
+        Descreve a estrutura do sistema pelas, classes, metodos e atributos.
+
+        Visibilidade:
+          - (+) public
+          - (-) private
+          - (#) protected
+          - (~) package
+
+        Estaticos
+          Não precisam ser instanciados.
+
+        Relacionamento
+          Uma classe herda os atributos e metodos de outra.
+
+
+
+
+
