@@ -40,7 +40,6 @@ class Professor extends Usuario {
 }
 
 class Turma{
-  // Relação de dependencia
   private $professor;
 
   public function setProfessor(Professor $prof){
@@ -50,11 +49,11 @@ class Turma{
 
 // Usuario::seLogar();
 
-$luiz = new Professor; // Instancia um objeto Professor
+$luiz = new Professor; //Instancia um objeto Professor
 $luiz->mudaNome(); // Executa o metodo que o obj Professor tem
 echo $luiz->getNome(); // Imprime na tela
 $turma = new Turma; // Instancia um objeto Turma
-$turma->setProfessor($luiz); // Executa o metodo que o obj Turma tem
+$turma->setProfessor($luiz); //
 // [->setProfessor(Objeto)] espera o um objeto do tipo professor 
 // [$luiz] é um objeto do tipo Professor
 
