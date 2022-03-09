@@ -1,6 +1,7 @@
 <?php 
 
-include "./Interfaces/Crud.interface.php";
+chdir(__DIR__); // Mostra o diretorio do arquivo em si, ou seja, está na pasta [/Classes]
+require_once "../Interfaces/Crud.interface.php";
 
 class Produto implements Crud { 
   private $id;
