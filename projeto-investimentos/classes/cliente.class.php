@@ -1,54 +1,58 @@
 <?php
-require_once __DIR__ . '../investimentos.class.php';
-class Cliente extends Investimentos implements Crud
+class Cliente implements Crud
 {
-  protected int $id;
-  protected string $nome;
-  protected string $telefone;
-  public array $investimentos;
+  var $bd;
 
-  function __construct(int $id, string $nome, string $telefone)
+  function __construct($bd)
   {
-    $this->id = $id;
-    $this->nome = $nome;
-    $this->telefone = $telefone;
-    $this->investimentos = array();
+    $this->bd = $bd;
   }
 
-  public function editar(array $dados): string
+  public function criar(array $dados): array
+  {
+    $nome = $dados['name'] ?? '';
+    $telefone = $dados['tel'] ?? '';
+    if (!$nome)
+      return array(false, 'Insira um nome valido');
+
+    $sql = "INSERT INTO cliente (nome, telefone)
+            VALUES (:nome, :telefone)";
+
+    $insert = $this->bd->prepare($sql);
+    $sucesso = $insert->execute(array(
+      ':nome' => $nome,
+      ':telefone' => $telefone,
+    ));
+
+    if ($sucesso)
+      return array(true, 'Cliente registrado com sucesso');
+    else
+      return array(false, 'Erro no insert');
+  }
+
+  public function editar(array $dados): array
   {
 
-    $this->id = $dados['id'];
-    $this->nome = $dados['nome'];
-    $this->telefone = $dados['telefone'];
-
-    return "Classe editada com sucesso";
+    return array(true, 'Usuario editado com sucesso');
   }
 
   public function listar(): array
   {
-    return array(
-      'id' => $this->id,
-      'nome' => $this->nome,
-      'telefone' => $this->telefone,
-      'investimentos' => $this->investimentos
-    );
+    $select = $this->bd->prepare("SELECT id, nome, telefone FROM cliente");
+    $sucesso = $select->execute();
+    if (!$sucesso)
+      return array(false, 'Erro no select');
+
+    return $select->fetchAll();
   }
 
-  public function gravar(): string
+  public function investir(int $investimento_id): array
   {
-    return 'Dados gravados no banco com sucesso';
+    return array(true, 'Investimento realizado com sucesso');
   }
 
-  public function investir(int $investimento_id): string
+  public function cancelarInvestimento(int $investimento_id): array
   {
-    array_push($this->investimentos, $investimento_id);
-    return 'Investimento realizado com sucesso';
-  }
-
-  public function cancelarInvestimento(int $investimento_id): string
-  {
-    unset($this->investimentos[$investimento_id]);
-    return 'Investimento cancelado com sucesso';
+    return array(true, 'Investimento cancelado com sucesso');
   }
 }

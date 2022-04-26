@@ -1,34 +1,25 @@
 <?php
 class Ativo implements Crud
 {
-  protected int $id;
-  protected string $nome;
+  var $bd;
 
-  function __construct(int $id, string $nome,)
+  function __construct($bd)
   {
-    $this->id = $id;
-    $this->nome = $nome;
+    $this->bd = $bd;
   }
 
-  public function editar(array $dados): string
+  public function criar(array $dados): array
   {
+    return array(true, 'Ativo criado com sucesso');
+  }
 
-    $this->id = $dados['id'];
-    $this->nome = $dados['nome'];
-
-    return "Classe editada com sucesso";
+  public function editar(array $dados): array
+  {
+    return array(true, "Ativo editada com sucesso");
   }
 
   public function listar(): array
   {
-    return array(
-      'id' => $this->id,
-      'nome' => $this->nome,
-    );
-  }
-
-  public function gravar(): string
-  {
-    return 'Dados gravados no banco com sucesso';
+    return array();
   }
 }
