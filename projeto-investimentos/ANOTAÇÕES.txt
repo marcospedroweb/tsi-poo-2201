@@ -1,0 +1,11 @@
+O que eu poderia mudar nesse projeto?
+  Após ver o professor fazendo o mesmo projeto mas com outro pensamento, anotarei aqui alguns mudanças que poderia fazer.
+
+  - Layout do projeto
+    Eu poderia adicionar um padrão de projeto, como por exemplo MVC, utilizando Models, controllers, public e views.
+
+  - Não utilizando interface
+    Uma maneira de substituir a interface é utilizar um classe abstrata (model) com o banco já adicinado e as funções abstratas. As outras classes (outras models), iria receber essa classe abstrata como herança.
+
+  - Views
+    As minhas Views seria semelhante a pasta [telas] que eu criar, com fragmentos do codigo que seriam adicionados a arquivos principais fora dessa view. Isso utilizando o require.
