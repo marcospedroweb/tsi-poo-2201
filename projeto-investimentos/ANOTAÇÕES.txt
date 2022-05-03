@@ -1,5 +1,5 @@
 O que eu poderia mudar nesse projeto?
-  Após ver o professor fazendo o mesmo projeto mas com outro pensamento, anotarei aqui alguns mudanças que poderia fazer.
+  Após ver o professor fazendo o mesmo projeto mas com outro pensamento, anotarei aqui alguns mudanças que poderia no projeto que eu desenvolvi.
 
   - Layout do projeto
     Eu poderia adicionar um padrão de projeto, como por exemplo MVC, utilizando Models, controllers, public e views.
@@ -9,3 +9,6 @@ O que eu poderia mudar nesse projeto?
 
   - Views
     As minhas Views seria semelhante a pasta [telas] que eu criar, com fragmentos do codigo que seriam adicionados a arquivos principais fora dessa view. Isso utilizando o require.
+
+  - Models
+    Nas minha models ficaria as classes de cada tabela do meu projeto. Tendo as funções herdadas do classe abstrata que provavelmente teria o crud normal (criar, atualizar, listar e apagar).
