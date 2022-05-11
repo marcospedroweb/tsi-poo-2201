@@ -3,12 +3,14 @@
 require_once '../Models/Cliente.class.php';
 require_once '../Models/Investimento.class.php';
 
-class Main {
+class Main
+{
 
     private Cliente $cliente;
     private Investimento $investimento;
 
-    public function __construct(){
+    public function __construct()
+    {
 
         $this->cliente = new Cliente;
         $this->investimento = new Investimento;
@@ -21,7 +23,7 @@ class Main {
         $clientes = $this->cliente->listar();
 
         //Para cada cliente
-        foreach($clientes as $ind => $cliente){
+        foreach ($clientes as $ind => $cliente) {
 
             //Recupero a carteira de investimentos
             $carteira = $this->investimento->carteiraCliente($cliente['id']);
@@ -29,7 +31,7 @@ class Main {
             $totalAtivos = 0;
 
             //E calculo o total de ativos na carteira
-            foreach ($carteira as $cadaAtivo){
+            foreach ($carteira as $cadaAtivo) {
 
                 $totalAtivos += $cadaAtivo['qtd'];
             }
@@ -39,6 +41,5 @@ class Main {
 
         require_once '../Views/cliente.listar.php';
     }
-
 }
-new Main;
+new Main;//Iniciando essa classe e pelo construtor, iniciando [clientes] e [investimento] e listando os clientes
