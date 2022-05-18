@@ -1,0 +1,29 @@
+SOLID NA Pratica
+
+  Open close
+    Principio de 1988, que diz que o codigo deve estar apto se expandir, ou seja, o seu codigo deve estar fechado para alteração, porém, aberto para extensão.
+    Em alguns casos, para utilizar esse "Open close", geralmente cria-se uma classe abstrata ao inves da interface.
+    O padrão de projeto Template é fundamental para projetos que há muitas funcionalidades especificas.
+    Já o padrão de projeto strategy, se precisar uma segunda classe, já cria interface, no projeto haverá apenas modificações pequenas, faceis e não tão especificas.
+
+  Substituição de Liskov
+    Uma classe deve sobrescrever (polimorfismo) os metodos da classe pai/mãe sem interromper a funcionalidade da classe que utiliza o metodo.
+
+  Dica
+   Não tenha medo de reescrever (refatorar) o codigo, o importante é aplicar e enteder os principios do SOLID.
+
+  Interface Segregation
+    *O Principio de Segregação de interface (ISP) se refere a lógica de negócios para implementação de classe clientes.
+    Nenhum codigo cliente deve ser forçado a depender de métodos que não usa.
+    O ISP ensina a respeitar o codigo do cliente. As interfaces pertencem aos seus códigos clientes e não ás implementações, ou seja, devemos projetar para atender da melhor forma os códigos clientes.
+    Em alguns casos não conhecemos o codigo cliente, mas quando pudermos, devemos fragmentar nossas interfaces em pedaços de interfaces menores para atender melhor os codigos clientes.
+
+    Outros principios
+      Principio de responsabilidade Única (SRP) se refere a atores e arquitetura de alto nível.
+      O princípio aberto/fechado (OCP) se refere ao projeto de classe e extensões de recursos.
+      O princípio de Substituição de liskov (LSP) trata de subtipagem e herança.
+
+  Dependency Inversion (DIP)
+   Módulos (classes na maioria das vezes) de alto nível NÃO devem depender de módulos de baixo nível. Ambos devem depender de abstrações. 
+   Módulo Alto nível -> qualquer um que depende de outro módulo.
+   Módulo Baixo nível -> qualquer um que não depende de outro módulo.
